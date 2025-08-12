@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Your place to get started with semantic web development"
+    />
+    <title>Rendring app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <hgroup>
+        <h1>Rendring app</h1>
+        <p>an app showing names and odd numbers</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <div>
+        <h2>Lists of the names:</h2>
+        <ul id="nameResults"></ul>
+      </div>
+      <div>
+        <h2>Lists of the odd numbers:</h2>
+        <ol id="oddnumberResults"></ol>
+      </div>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        &copy; 2025| Github
+        <a href="https://github.com/Tushar13Kumar">Tushar kumar</a>
+      </small>
+    </footer>
+    <script>
+      const names = ["Ravi", "Joy", "priya", "amit"];
+
+      const nameResults = document.getElementById("nameResults");
+
+      function listNames(name) {
+        const allElement = `<li>${name}</li>`;
+        return allElement;
+      }
+
+      const allNames = names.map(listNames);
+      nameResults.innerHTML = allNames.join("");
+
+      const evenNumbers = [12, 14, 48, 10, 8];
+      const oddnumberResults = document.getElementById("oddnumberResults");
+
+      function convertIntoOdd(num) {
+        const incementBy1 = num + 1;
+        const listOfNumbers = `<li>${num}</li>`;
+        return listOfNumbers;
+      }
+
+      const oddNumber = evenNumbers.map(convertIntoOdd);
+      oddnumberResults.innerHTML = oddNumber.join("");
+    </script>
+  </body>
+</html>
