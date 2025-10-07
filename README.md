@@ -55,5 +55,5 @@ It is a simple yet effective practice project to strengthen core JavaScript skil
 
 ## 👤 Author
 
-**Tushar Kumar**  
+**Tushar Kumar** copy right reserved  
 [GitHub Profile](https://github.com/Tushar13Kumar)
